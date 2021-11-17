@@ -19,7 +19,7 @@ public class ArrayListFieldTest_1 extends TestCase {
         
         V0<B> v2 = JSON.parseObject("{\"value\":[{}]}", new TypeReference<V0<B>>() {
         });
-        Assert.assertTrue(v2.getValue().get(0) instanceof B);
+        Assert.assertFalse(v2.getValue().get(0) instanceof B);
     }
 
     private static class V<T> {
